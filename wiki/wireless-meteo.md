@@ -30,32 +30,35 @@
 {{ :projects:meteo_collage.jpg?direct&700 }}
 
 Для изготовления автономного передатчика нам понадобятся:
-  -[[amp>product/teensy-31|Teensy 3.1]]
-  -[[amp>product/rf-433-transmitter|Передатчик на 433 МГц]]
-  -[[amp>product/temperature-humidity-sensor-sht1x|Датчик температуры и влажности]]
-  -[[amp>product/breadboard-mini|Макетная плата Mini]]
-  -[[amp>product/battery-holder-3-aa|Держатель пальчиковых батареек на x3 AA]]
-  -[[amp>product/wire-mm|Провода папа-папа ×3 шт]]
-  -[[amp>product/resistor|Резистор на 100 кΩ]]
-  -[[amp>product/resistor|Резистор на 10 кΩ]]
+  -[[amp>product/teensy-31?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Teensy 3.1]]
+  -[[amp>product/rf-433-transmitter?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Передатчик на 433 МГц]]
+  -[[amp>product/temperature-humidity-sensor-sht1x?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Датчик температуры и влажности]]
+  -[[amp>product/breadboard-mini?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Макетная плата Mini]]
+  -[[amp>product/battery-holder-3-aa?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Держатель пальчиковых батареек на x3 AA]]
+  -[[amp>product/wire-mm?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Провода папа-папа ×3 шт]]
+  -[[amp>product/resistor?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Резистор на 100 кΩ]]
+  -[[amp>product/resistor?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Резистор на 10 кΩ]]
+  -[[amp>product/pin-headers?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Штырьковые соединители x36 контактов]]
 
 Для изготовления ретранслятора нам понадобятся:
-  -[[amp>product/arduino-uno|Arduino Uno]]
-  -[[amp>product/arduino-ethernet|Arduino Ethernet]]
-  -[[amp>product/rf-433-receiver|Приёмник на 433 МГц]]
-  -[[amp>product/breadboard-mini|Макетная плата Mini]]
-  -[[amp>product/wire-mm|Провода папа-папа ×4 шт]]
+  -[[amp>product/arduino-uno?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Arduino Uno]]
+  -[[amp>product/arduino-ethernet?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Arduino Ethernet]]
+  -[[amp>product/rf-433-receiver?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Приёмник на 433 МГц]]
+  -[[amp>product/breadboard-mini?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Макетная плата Mini]]
+  -[[amp>product/wire-mm?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Провода папа-папа ×4 шт]]
+  -[[amp>product/usb-power-plug?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Блок питания с USB разъёмом]]
+  -[[amp>product/usb-cable?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|USB кабель]]
 
 Так же удобно установить два светодиода для индикации процессов:
-  -[[amp>product/wire-mm|Провода папа-папа ×2 шт]]
-  -[[amp>product/led-5mm|Светодиод красный ×1 шт]]
-  -[[amp>product/led-5mm|Светодиод зелёный ×1 шт]]
-  -[[amp>product/resistor|Резисторы на 220 Ω x2 шт]]
+  -[[amp>product/wire-mm?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Провода папа-папа ×2 шт]]
+  -[[amp>product/led-5mm?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Светодиод красный ×1 шт]]
+  -[[amp>product/led-5mm?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Светодиод зелёный ×1 шт]]
+  -[[amp>product/resistor?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Резисторы на 220 Ω x2 шт]]
 
 Для звуковой индикации разряда батареи автономной части удобно использовать
 пьезо-пищалку:
-  -[[amp>product/wire-mm|Провод папа-папа ×1 шт]]
-  -[[amp>product/piezo-buzzer|Пьезо-пищалка]]
+  -[[amp>product/wire-mm?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Провод папа-папа ×1 шт]]
+  -[[amp>product/piezo-buzzer?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|Пьезо-пищалка]]
 
 ===== Как это собрать? =====
 
@@ -481,9 +484,9 @@ void loop() {
 
 ===== Демонстрация работы устройства =====
 
-{{youtube>R7ILpfYvDNc?large}}
+{{youtube>1Iv1meDU588?large}}
 
 ===== Что ещё можно сделать? =====
 
-  - Мы установили только сенсор температуры и влажности. Но у Teensy остаётся ещё много свободных ножек, т.ч. можно добавить разных датчиков: освещённости, атмосферного давления, скорости ветра и т.д..
-  - Teensy прямо на борту имеет часы реального времени (RTC). Для их работоспособности не хватает только кварца. Можно купить кварц на 32,768 КГц и припаять его. Тогда можно пробуждать Teensy по будильнику RTC. Достоинство в том, что можно будить устройство чаще в те часы, когда нужны более точные показания. Например, в рабочее время будить устройство каждые 5 минут, а в остальное — каждые полчаса.
+  - Мы установили только сенсор температуры и влажности. Но у Teensy остаётся ещё много свободных ножек, т.ч. можно добавить разных датчиков: [[amp>product/ldr?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|освещённости]], [[amp>product/barometer?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|атмосферного давления]], [[amp>product/anemometer-kit?utm_source=proj&utm_campaign=wirelessmeteo&utm_medium=wiki|скорости ветра]] и т.д.
+  - Teensy прямо на борту имеет часы реального времени (RTC). Для их работоспособности не хватает только кварца. Можно купить кварц на 32,768 КГц в любом магазине радиоэлементов и припаять его. Тогда можно пробуждать Teensy по будильнику RTC. Достоинство в том, что можно будить устройство чаще в те часы, когда нужны более точные показания. Например, в рабочее время будить устройство каждые 5 минут, а в остальное — каждые полчаса.
